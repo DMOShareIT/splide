@@ -1225,7 +1225,7 @@ function Move(Splide2, Components2, options) {
   function translate(position, preventLoop) {
     if (!Splide2.is(FADE)) {
       var destination = preventLoop ? position : loop(position);
-      style(list, "transform", "translate" + resolve("X") + "(" + destination + "px)");
+      style(list, "transform", "translate" + resolve("X") + "(" + Math.round(destination) + "px)");
       position !== destination && emit(EVENT_SHIFTED);
     }
   }

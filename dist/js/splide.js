@@ -1219,7 +1219,7 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
     function translate(position, preventLoop) {
       if (!Splide2.is(FADE)) {
         var destination = preventLoop ? position : loop(position);
-        style(list, "transform", "translate" + resolve("X") + "(" + destination + "px)");
+        style(list, "transform", "translate" + resolve("X") + "(" + Math.round(destination) + "px)");
         position !== destination && emit(EVENT_SHIFTED);
       }
     }
