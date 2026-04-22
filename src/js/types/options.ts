@@ -104,7 +104,7 @@ export interface Options extends ResponsiveOptions {
 
   /**
    * Enables navigation by the mouse wheel.
-   * Set `waitForTransition` to `ture` or provide the `wheelSleep` duration.
+   * Set `waitForTransition` to `true` or provide the `wheelSleep` duration.
    */
   wheel?: boolean;
 
