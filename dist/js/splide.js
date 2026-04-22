@@ -59,7 +59,7 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
   }
   function isHTMLElement(subject) {
     try {
-      return subject instanceof (subject.ownerDocument.defaultView || window).HTMLElement;
+      if (subject instanceof subject.ownerDocument.defaultView.HTMLElement) return true;else if (subject instanceof window.top.HTMLElement) return true;
     } catch (e) {
       return false;
     }

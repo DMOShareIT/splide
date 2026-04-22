@@ -59,7 +59,7 @@ function isNull(subject) {
 }
 function isHTMLElement(subject) {
   try {
-    return subject instanceof (subject.ownerDocument.defaultView || window).HTMLElement;
+    if (subject instanceof subject.ownerDocument.defaultView.HTMLElement) return true;else if (subject instanceof window.top.HTMLElement) return true;
   } catch (e) {
     return false;
   }
