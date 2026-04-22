@@ -5,7 +5,7 @@ import { Options } from '../../../types';
 
 /**
  * - `aria-selected` is tested on general.test.
- * - `aria-labelledby` is not necessary since each tabpanel has its own `aria-label`.
+ * - `aria-labelledby` is not necessary since each presentation has its own `aria-label`.
  */
 describe( 'Pagination', () => {
   test( 'can set the `tablist` role to the pagination root.', () => {
